@@ -1,1 +1,3 @@
 - Add Binary: **
+- TOeplitz matrix: *simple 2 for loops the reason compared to mat[i-1][j-1] is because we will go out of bounds. Also we are chencking not equal condition because if we return true it will give true back right away and we want the entire for loop to run*
+- 
