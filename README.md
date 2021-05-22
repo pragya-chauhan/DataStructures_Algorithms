@@ -8,3 +8,6 @@
 
 
 Amazon Phone May 14th 654. Maximum Binary Tree
+VC min index missing
+maximal rectangle in a matrix of binary
+
