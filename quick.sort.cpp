@@ -15,6 +15,9 @@ Step 1 − Make any element as pivot
 Step 2 − Partition the array on the basis of pivot
 Step 3 − Apply quick sort on left partition recursively
 Step 4 − Apply quick sort on right partition recursively
+
+
+OUR GOAL IS TO HAVE SMALLER ELEMENTS TO THE LEFT OF PIVOT AND GREATER TO THE RIGHT WHICH IS WHY WE TAKE LESS THAN PIVOT AND SWAP. ALSO YOU KEEP REPEATING THIS AND WILL REACH A POINT WHERE PIVOT IS FIRST ELEMENT AND ALL ELEMENTS ON RIGHT WILL BE GREATER SO THAT IS THE ANSWER.
 */
 
 
