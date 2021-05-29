@@ -16,7 +16,16 @@ input:  str1 = "some", str2 = "thing"
 output: 9
 
 input:  str1 = "", str2 = ""
-output: 0*/
+output: 0
+
+failed case
+Input:
+ 
+"ab", "ba"
+Expected:2
+Actual: 0
+
+*/
 
 
 
