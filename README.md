@@ -13,3 +13,5 @@ maximal rectangle in a matrix of binary
 
 Amazon april 9th word search LC, 
 
+VC maximum area of rectangle grid of 0 and 1
+
