@@ -37,28 +37,28 @@ Actual: 0
 
 using namespace std;
 
-int deletionDistance( const string& str1, const string& str2 ) 
+int deletionDistance( const string& word1, const string& word2 ) 
 {
   map<char, int> dict;
   int edit_dist = 0;
-  for (int i = 0; i< str1.length(); i++)
+  for (int i = 0; i< word1.length(); i++)
   {
-   dict[str1[i]]++; //a b
+   dict[word1[i]]++; //a b
                     //1 1
     
   }
   
- for(int j = 0; j<str2.length(); j++)     //dfrog
+ for(int j = 0; j<word2.length(); j++)     //dfrog
  {
-   if(dict.find(str2[j]) == dict.end())     //
+   if(dict.find(word2[j]) == dict.end())     //
    {
      edit_dist++;       //ed = 
       //if 0 then erase
    }
    else{
-          dict[str2[j]]--;  //decrease by 1
-     if(dict[str2[j]] == 0)     //d = 1
-       dict.erase(str2[j]); 
+          dict[word2[j]]--;  //decrease by 1
+     if(dict[word2[j]] == 0)     //d = 1
+       dict.erase(word2[j]); 
    }
  }
   if(dict.empty())    //edit 2 left d
