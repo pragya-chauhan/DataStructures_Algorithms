@@ -10,3 +10,22 @@ public:
 };
 
 
+
+/*
+void reverse(vector<char> & s){
+    reverse(s.begin(), s.end());
+    for(int i = 0; i<s.size()/2; i++){
+        char curr = s[i];
+    swap(s[i], s[s.size()-1-i]);
+    
+    }
+
+
+
+}
+
+
+
+*/
+
+
