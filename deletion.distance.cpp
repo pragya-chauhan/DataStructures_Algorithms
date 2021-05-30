@@ -31,47 +31,24 @@ Actual: 0
 
 
 
-#include <iostream>
-#include <string>
-#include <map>
+class Solution {
+public:
+    int minDistance(string word1, string word2) {
+         int m = word1.length(); //5
+      int n = word2.length(); //3
 
-using namespace std;
-
-int deletionDistance( const string& word1, const string& word2 ) 
-{
-  map<char, int> dict;
-  int edit_dist = 0;
-  for (int i = 0; i< word1.length(); i++)
-  {
-   dict[word1[i]]++; //a b
-                    //1 1
-    
-  }
-  
- for(int j = 0; j<word2.length(); j++)     //dfrog
- {
-   if(dict.find(word2[j]) == dict.end())     //
-   {
-     edit_dist++;       //ed = 
-      //if 0 then erase
-   }
-   else{
-          dict[word2[j]]--;  //decrease by 1
-     if(dict[word2[j]] == 0)     //d = 1
-       dict.erase(word2[j]); 
-   }
- }
-  if(dict.empty())    //edit 2 left d
-    return edit_dist;
-  else {
-    return (edit_dist + dict.size());   //3
-  }
-
-
-}
-
-int main() {
-  cout << deletionDistance("some","osme");
-  return 0;
-}
-
+        vector<vector<int>> memo(m+1, vector<int>(n+1, 0)); //6,4
+      
+      for(int i = 1; i<= m; i++){
+        for(int j = 1; j<=n; j++){
+          if(word1[i-1] == word2[j-1])
+            memo[i][j] =memo[i-1][j-1] + 1;
+          else
+            memo[i][j] = max(memo[i-1][j], memo[i][j-1]);
+        
+        }
+      }
+      return (m + n - 2*memo[m][n]);
+        
+    }
+};
