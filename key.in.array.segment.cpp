@@ -4,6 +4,20 @@ x = 3
 k = 3 
 Output : Yes 
 
+no of seg = size arr/ k         //not equal seg
 
+iterate over smalller seg to search target
+
+if all true then return true
 
 */
+
+bool findxinkindowSize() {
+  
+
+
+}
+
+
+
+
