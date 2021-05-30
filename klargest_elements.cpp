@@ -1,18 +1,31 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+/*https://www.youtube.com/watch?v=FrWq2rznPLQ
 
-using namespace std;
-void klargest(vector<int> input, int n){
-    sort(input.begin(),input.end() );
-    for(int i = input.size()-1; i>=input.size()-n; i--){
-        cout<<input[i]<<endl;
+
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end());
+        return nums[nums.size() - k];           //nlogn
     }
-}
-int main()
-{
-    vector<int> input = {5,8,1,0};
-    int n = 3;
-    klargest(input,n);
-    
-}
+};
+
+
+*/
+
+
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        //priority queue is maxheap by default so to change to minheap this declaration
+        priority_queue<int,vector<int>,greater<int>> minHeap;
+        
+        for(int i = 0; i< nums.size(); i++){
+            minHeap.push(nums[i]);
+            if(minHeap.size()>k){
+                minHeap.pop();
+            }
+        
+        }
+        return minHeap.top();
+    }
+};
