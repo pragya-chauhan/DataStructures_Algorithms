@@ -15,5 +15,5 @@ int reverseBinary(vector<int> input, int tgt){
   
   }
   return -1;
-
+// 9 8 7 6 5
 }
